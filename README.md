@@ -18,16 +18,23 @@ npx storybook@latest init
 
 This command will detect your framework and configure Storybook accordingly.
 
+
 ### 3. Start Storybook
-After installation, you can start Storybook with:
+After installation, you can start Storybook locally to view and interact with your components:
 
 ```sh
 npm run storybook
 ```
-or
+
+or, if you use Yarn:
+
 ```sh
 yarn storybook
 ```
+
+This will start a local development server and open Storybook in your default browser, usually at [http://localhost:6006](http://localhost:6006).
+
+You can now browse your stories, use add-ons, and (if installed) access the Playwright codegen panel.
 
 ---
 **Troubleshooting:**
