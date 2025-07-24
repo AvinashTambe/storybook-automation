@@ -34,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/AvinashTambe/storybook-automation/issues"
   },
-  "homepage": "https://github.com/AvinashTambe/storybook-automation#readme"
+  "homepage": "https://github.com/AvinashTambe/storybook-automation#readme",
+  "dependencies": {
+    "react-icons": "^5.5.0"
+  }
 }

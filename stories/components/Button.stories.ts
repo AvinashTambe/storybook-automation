@@ -2,6 +2,7 @@ import { fn, userEvent, waitFor, within, expect } from 'storybook/test';
 
 import { Button } from './Button';
 import './Button.css'
+import { FaArrowRight } from 'react-icons/fa';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
@@ -20,14 +21,19 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary = {
   args: {
-    label: 'Button',
+    label: 'Primary Button',
+    variant: 'primary',
+    size: 'large',
   },
 };
 
 export const Secondary = {
   args: {
-    label: 'Button',
+    label: 'Secondary Button',
+    variant: 'secondary',
+    size: 'medium',
   },
 };
+
 
 
