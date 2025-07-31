@@ -19,8 +19,10 @@
   color: #333;
 }
 .storybook-button--small {
-  padding: 10px 30px;
+  padding: 8px 16px;
   font-size: 12px;
+  height: 32px;
+  min-width: 80px;
 }
 
 .storybook-button--primary:hover {
@@ -29,13 +31,17 @@
 }
 
 .storybook-button--medium {
-  padding: 11px 40px;
+  padding: 12px 24px;
   font-size: 14px;
+  height: 40px;
+  min-width: 120px;
 }
+
 .storybook-button--large {
-  height: 48px;
-  padding: 12px 20px;
+  padding: 16px 32px;
   font-size: 16px;
+  height: 48px;
+  min-width: 160px;
 }
 
 .button-icon {

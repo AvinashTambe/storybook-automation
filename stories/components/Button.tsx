@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './button.css';
+import * as Icons from 'react-icons/fa';
 
 export const Button = ({
   label,
@@ -8,17 +9,21 @@ export const Button = ({
   size = 'medium',
   icon,
   iconPosition = 'left',
+  type = false,
   ...props
 }) => {
   const variantClass = `storybook-button--${variant}`;
   const sizeClass = `storybook-button--${size}`;
-  const className = ['storybook-button', variantClass, sizeClass].join(' ');
+  const typeClass = type ? 'storybook-button--destructive' : '';
+  const className = ['storybook-button', variantClass, sizeClass, typeClass].join(' ');
+
+  const IconComponent = icon && Icons[icon] ? Icons[icon] : null;
 
   return (
     <button type="button" className={className} {...props}>
-      {icon && iconPosition === 'left' && <span className="button-icon left">{icon}</span>}
+      {IconComponent && iconPosition === 'left' && <span className="button-icon left"><IconComponent /></span>}
       <span>{label}</span>
-      {icon && iconPosition === 'right' && <span className="button-icon right">{icon}</span>}
+      {IconComponent && iconPosition === 'right' && <span className="button-icon right"><IconComponent /></span>}
     </button>
   );
 };
@@ -34,7 +39,7 @@ interface ButtonProps {
   size?: 'small' | 'medium' | 'large';
 
   /** Optional icon to display */
-  icon?: React.ReactNode;
+  icon?: string;
 
   /** Position of the icon: left or right */
   iconPosition?: 'left' | 'right';
